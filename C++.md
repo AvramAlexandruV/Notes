@@ -1,3 +1,13 @@
+# tipuri de date
+    >> Int ("%d") - 32 bit integer
+    >> Long ("%ld") - 64 bit integer
+    >> Char ("%c") - character type
+    >> Float ("%f") - 32 bit real value
+    >> Double ("%lf") - 64 bit real value
+
+    >> citire: scanf(`format specifier`,&val)
+    >> afisare: afisare : printf(`format specifier`, val)
+
 # vectori alocati dinamic
     >> int *p = (int*)malloc(n*sizeof(int))
     >> char *p = (char*)malloc(n*sizeof(char))
@@ -32,3 +42,19 @@
             free(p[i]);
         free(p);
     >>
+
+# operatii pe fisiere
+    >> r - deschidere fisier pentru a fi citit
+    >> w - creaza fisier text pentru scriere
+    >> a - adauga intr-un fisier text la final
+    >> rb - deschide fisier binar pentru citire
+    >> wb - creeaza fisier binar pentru scriere
+    >> ab - adauga la finalul unui fisier binar
+    >> r+ - deschide un fisier pentru citire/scriere
+    >> w+ - creeaza un fisier pentru citire/scriere
+    >> a+ - adauga in sau creeaza un fisier pentru citire/scriere
+    >> r+b - deschide un fisier binar pentru scriere/citire
+    >> a+b - adauga sau creeaza un fisier binar pentru scriere/citire
+
+## STL
+# vector
