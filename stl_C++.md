@@ -238,3 +238,32 @@
         >> erase(const g) - removes the value g from the set
         >> clear() - removes all the elements from the set
     >>
+
+# STL -> map
+    >>> declaration
+    <<
+        map<string,int> map1;
+    >>
+
+    >>> printing the elements
+    <<
+        map<string,int>::iterator it = map.begin();
+        
+        while(it != map.end()){
+            cout << "Key" << it->first << "Value" << it->second;
+            ++it;
+        }
+    >>
+
+    >> functions
+    <<
+        >> begin() - returns an iterator to the first element in the map
+        >> end() - returns an iterator to the theoretical element that follows the las element in the map
+        >> size() - returns the number of elements in the map
+        >> max_size() - returns the maximum number of elements that the map can hold
+        >> empty() - returns wether the map is empty
+        >> pair_insert(key_value, map_value) - adds a new element to the map
+        >> erase(iterator_position) - removes the element at the position pointed by the iterator
+        >> erase(const g) - removes the key-value g from the map
+        >> clear() - removes all the elements from the map
+    >>
