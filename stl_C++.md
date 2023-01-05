@@ -3,6 +3,42 @@
         The Standard Template Library (STL) is a set of C++ template classes to provide common programming data structures and functions such as lists, stacks, arrays, etc. It is a library of container classes, algorithms, and iterators. It is a generalized library and so, its components are parameterized.
     >>
 
+# STL Algorithms
+    >>> Sorting
+    <<
+        sort(start_address, end_address);
+    >>
+
+    >>> Searching
+    <<
+        binary_search(start_address, end_address, value_to_find);
+        ? returns true or false
+    >>
+
+    >>> Non-Manipulating Algorithms
+    <<
+        >> sort(first_iterator, last_iterator) - to sort the given vector
+        >> sort(first_iterator, last_iterator, greater<int>()) - to sort the given container/vector in descending order
+        >> reverse(first_iterator, last_iterator) - to reverse a vector
+        >> *max_element(first_iterator, last_iterator) - to find the maximum element of a vector
+        >> *min_element(first_iterator, last_iterator) - to find the minimum element of a vector
+        >> accumulate(first_iterator, last_iterator, initial value of sum) - does the summation of vector elements
+        >> count(first_iterator, last_iterator, x) - to count the occurences of x in vector
+        >> find(first_iterator, last_iterator, x) - returns an iterator to the first occurrence of x in vector and points to last address of vector, if element is not present in vector
+        >> binary_search(first_iterator, last_iterator, x) - test wether x exists in sortef vector or not
+        >> lower_bound(first_iterator, last_iterator, x) - returns an iterator pointing to the first element in the range [first,last) which has value not less than 'x'
+        >> upper_bound(first_iterator, last_iterator, x) - returns an iterator pointing to the first element in the range [first,last) which has a value greater than 'x'
+    >>
+
+    >>> Manipulating Algorithms
+    <<
+        >> arr.erase(position_to_be_deleted) - this erases selected element in vector and shifts and resizes the vector elements accordingly
+        >> arr.erase(unique(arr.begin(),arr.end()),arr.end()) - this erases the duplicate occurences in sorted vector in a single line
+        >> next_permutation(first_iterator, last_iterator) - this modified the vector to its next permutation
+        >> prev_permutation(first_iterator, last_iterator) - this modified the vector to its previous permutation
+        >> distance(first_iterator, desired_position) - it returns the distance of desired position from the first iterator.
+    >>
+
 # STL Sequence Containers
 >>> vector
     <<
@@ -120,4 +156,85 @@
         >> deque::resize() - function which change the size of the deque
         >> deque::push_front() - it is used to push elements into a deque from the front
         >> deque::push_back() - this function is used to push elements into a deque from the back
+    >>
+
+# STL Container Adaptors
+>>> queue
+    <<
+        Queues are a type of container adaptors that operate in a first in first out (FIFO) type of arrangement. Elements are inserted at the back (end) and are deleted from the front. Queues use an encapsulated object of deque or list (sequential container class) as its underlying container, providing a specific set of member functions to access its elements.
+    >>
+
+>>> stack
+    <<
+        Stacks are a type of container adaptors with LIFO(Last In First Out) type of working, where a new element is added at one end (top) and an element is removed from that end only.  Stack uses an encapsulated object of either vector or deque (by default) or list (sequential container class) as its underlying container, providing a specific set of member functions to access its elements.
+    >>
+
+# STL -> queue
+    >>> declaration
+    <<
+        queue<int> queue1;
+    >>
+
+    >>> printing the elements
+    <<
+       while(!queue1.empty()){
+            cout << queue1.front() << " ";
+            queue1.pop(); 
+       }
+    >>
+
+    >>> methods ( O(1) complexity )
+    <<
+        >> queue::empty() - returns whether the queue is empty
+        >> queue::size() - returns the size of the queue
+        >> queue::swap() - exchange the contents of two queues
+        >> queue::emplace() - insert a new element into the queue container, the new element is added at the end of the queue
+        >> queue::front() - returns a reference to the first element of the queue
+        >> queue::back() - returns a reference to the last element of the queue
+        >> queue::push(g) - adds the element g at the end of the queue
+        >> queue::pop() - deletes the first element of the queue
+    >>
+
+# STL -> stack
+    >>> declaration
+    <<
+        stack<int> stack1;
+    >>
+
+    >>> functions ( O(1) complexity )
+    <<
+        >> empty() - returns wether the stack is empty
+        >> size() - returns the size of the stack
+        >> top() - returns a reference to the top most element of the stack
+        >> push(g) - adds the element g at the top of the stack
+        >> pop() - deletes the top most element of the stack
+    >>
+
+# STL Associative Containers
+>>> set
+    <<
+         Sets are a type of associative container in which each element has to be unique because the value of the element identifies it. The values are stored in a specific sorted order i.e. either ascending or descending.
+    >>
+
+>>> map
+    <<
+        Maps are associative containers that store elements in a mapped fashion. Each element has a key value and a mapped value. No two mapped values can have the same key values.
+    >>
+
+# STL -> set
+    >>> declaration
+    <<
+        set<int> s;
+    >>
+
+    >>> functions
+    <<
+        >> begin() - returns an iterator to the first element in the set
+        >> end() - returns an iterator to the theoretical element that follows the last element in the set
+        >> size() - returns the number of elements in the set
+        >> max_size() - returns the maximum number of elements that the set can hold
+        >> empty() - returns wether the set is empty
+        >> count(const g) - returns 1 or 0 if the element g is present in the set or not
+        >> erase(const g) - removes the value g from the set
+        >> clear() - removes all the elements from the set
     >>
