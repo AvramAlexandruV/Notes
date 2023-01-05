@@ -20,14 +20,14 @@
     >>
 
 # STL -> vector
->>> declaration
+    >>> declaration
     <<
         vector<int> v;
         vector<char> v;
         vector<vector<int>> v;
     >>
 
->>> methods
+    >>> methods
     <<
         >> begin() - returns an iterator pointing to the first element in the vector
         >> end() - returns an iterator pointing to the theoretical element that follows the last element in the vector
@@ -39,7 +39,7 @@
         >> crend() - return a constant reverse iterator pointing to the theoretical element preceding the first element in the vector
     >>
 
->>> element access
+    >>> element access
     <<
         >> reference operator [g] ( aka v[g]) - returns a reference to the element at position g in the vector
         >> at(g) ( almost same as v[g] ) - returns a reference to the element at position g in vector
@@ -48,7 +48,7 @@
         >> data() - returns a direct pointer to the memory array used internally by the vector to store its owned elements.
     >>
 
->>> modifiers
+    >>> modifiers
     <<
         >> assign() - it assigns new value to the vector elements by replacing old ones ( v.assign(5, 1) fills the vector with 1 five times)
         >> push_back() - it push the elements into a vector from the back
@@ -62,19 +62,19 @@
     >>
 
 # STL -> list
->>> declaration
+    >>> declaration
     <<
         list<int> list1;
     >>
 
->>> printing the elements
+    >>> printing the elements
     <<
         list<int>::iterator it;
         for(it = list1.begin(); it != list1.end(); ++it)
             cout << *it << " "; 
     >>
 
->>> functions
+    >>> functions
     <<
         >> front() - returns the value of the first element in the list
         >> back() - returns the value of the last element in the list
@@ -101,19 +101,19 @@
     >>
 
 # STL -> deque
->>> declaration
+    >>> declaration
     <<
         deque<int> deque1;
     >>
 
->>> printing the elements
+    >>> printing the elements
     <<
         deque<int>::iterator it;
         for(it = deque1.begin(); it != deque1.end(); ++it)
             cout << *it << " "; 
     >>
 
->>> methods
+    >>> methods
     <<
         >> deque::insert() - inserts an element
         >> deque::assign() - assign values to the same or different deque container
