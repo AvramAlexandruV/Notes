@@ -1,2 +1,2 @@
 # Notes
-# C++ quick notes - fast syntax
+>>> a collection of notes
