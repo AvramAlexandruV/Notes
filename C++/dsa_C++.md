@@ -81,17 +81,7 @@
     <<
         A linked list consists of nodes where each node contains a data field and a reference to the next node in the list
     >>
-    ___       ___       ___
-   |A|-| ->  |B|-| ->  |C|-| -> NULL
-    ^
-    Head
-
-     Data
-      v
-     |A|-|
-        ^
-       Next
-
+    
 >>> Simple linked list
     <<
         In this type of linked list, one can move or traverse the linked list in only one direction, where the next pointer of each node points to other nodes but the next pointer of the last node points to NULL.
