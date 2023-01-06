@@ -78,6 +78,56 @@
     >>
 
 # Linked list
+    <<
+        A linked list consists of nodes where each node contains a data field and a reference to the next node in the list
+    >>
+    ___       ___       ___
+   |A|-| ->  |B|-| ->  |C|-| -> NULL
+    ^
+    Head
+
+     Data
+      v
+     |A|-|
+        ^
+       Next
+
+>>> Simple linked list
+    <<
+        In this type of linked list, one can move or traverse the linked list in only one direction, where the next pointer of each node points to other nodes but the next pointer of the last node points to NULL.
+    >>
+
+>>> Double linked list
+    <<
+        In this type of linked list, one can move or traverse the list in both directions.
+    >>
+
+>>> Circular linked list
+    <<
+        In this type of linked list, the last node of the linked list contains the link of the first/head node of the loinked list in its next pointer.
+    >>
+
+>>> Double Circular linked list
+    <<
+        A double circular linked list is or circular two-way linked list is a more complex type of linked list that contains a pointers to the next as well as the previous node in the sequence.
+    >>
+
+>>> Header Linked list
+    <<
+        A special type of linked list that contains a header node at the beginning of the list.
+    >>
+
+# Simple linked list
+
+# Double linked list
+
+# Circular linked list
+
+# Double Circular linked list
+
+# Header Linked list
+
+# Operatiosn with lists
 
 # Matrix / Grid
 
