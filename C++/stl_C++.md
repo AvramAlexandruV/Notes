@@ -4,17 +4,18 @@
     >>
 
 # STL Algorithms
+>
     >>> Sorting
     <<
         sort(start_address, end_address);
     >>
-
+>
     >>> Searching
     <<
         binary_search(start_address, end_address, value_to_find);
         ? returns true or false
     >>
-
+>
     >>> Non-Manipulating Algorithms
     <<
         >> sort(first_iterator, last_iterator) - to sort the given vector
@@ -29,7 +30,7 @@
         >> lower_bound(first_iterator, last_iterator, x) - returns an iterator pointing to the first element in the range [first,last) which has value not less than 'x'
         >> upper_bound(first_iterator, last_iterator, x) - returns an iterator pointing to the first element in the range [first,last) which has a value greater than 'x'
     >>
-
+>
     >>> Manipulating Algorithms
     <<
         >> arr.erase(position_to_be_deleted) - this erases selected element in vector and shifts and resizes the vector elements accordingly
@@ -56,13 +57,14 @@
     >>
 
 # STL -> vector
+>
     >>> declaration
     <<
         vector<int> v;
         vector<char> v;
         vector<vector<int>> v;
     >>
-
+>
     >>> methods
     <<
         >> begin() - returns an iterator pointing to the first element in the vector
@@ -74,7 +76,7 @@
         >> crbegin() - returns a constant reverse iterator pointing to the last element in the vector
         >> crend() - return a constant reverse iterator pointing to the theoretical element preceding the first element in the vector
     >>
-
+>
     >>> element access
     <<
         >> reference operator [g] ( aka v[g]) - returns a reference to the element at position g in the vector
@@ -83,7 +85,7 @@
         >> back() - returns a reference to the last element in the vector
         >> data() - returns a direct pointer to the memory array used internally by the vector to store its owned elements.
     >>
-
+>
     >>> modifiers
     <<
         >> assign() - it assigns new value to the vector elements by replacing old ones ( v.assign(5, 1) fills the vector with 1 five times)
@@ -98,18 +100,19 @@
     >>
 
 # STL -> list
+>
     >>> declaration
     <<
         list<int> list1;
     >>
-
+>
     >>> printing the elements
     <<
         list<int>::iterator it;
         for(it = list1.begin(); it != list1.end(); ++it)
             cout << *it << " "; 
     >>
-
+>
     >>> functions
     <<
         >> front() - returns the value of the first element in the list
@@ -137,18 +140,19 @@
     >>
 
 # STL -> deque
+>
     >>> declaration
     <<
         deque<int> deque1;
     >>
-
+>
     >>> printing the elements
     <<
         deque<int>::iterator it;
         for(it = deque1.begin(); it != deque1.end(); ++it)
             cout << *it << " "; 
     >>
-
+>
     >>> methods
     <<
         >> deque::insert() - inserts an element
@@ -170,11 +174,12 @@
     >>
 
 # STL -> queue
+>
     >>> declaration
     <<
         queue<int> queue1;
     >>
-
+>
     >>> printing the elements
     <<
        while(!queue1.empty()){
@@ -182,7 +187,7 @@
             queue1.pop(); 
        }
     >>
-
+>
     >>> methods ( O(1) complexity )
     <<
         >> queue::empty() - returns whether the queue is empty
@@ -196,11 +201,12 @@
     >>
 
 # STL -> stack
+>
     >>> declaration
     <<
         stack<int> stack1;
     >>
-
+>
     >>> functions ( O(1) complexity )
     <<
         >> empty() - returns wether the stack is empty
@@ -222,11 +228,12 @@
     >>
 
 # STL -> set
+>
     >>> declaration
     <<
         set<int> s;
     >>
-
+>
     >>> functions
     <<
         >> begin() - returns an iterator to the first element in the set
@@ -240,11 +247,12 @@
     >>
 
 # STL -> map
+>
     >>> declaration
     <<
         map<string,int> map1;
     >>
-
+>
     >>> printing the elements
     <<
         map<string,int>::iterator it = map.begin();
@@ -254,8 +262,8 @@
             ++it;
         }
     >>
-
-    >> functions
+>
+    >>> functions
     <<
         >> begin() - returns an iterator to the first element in the map
         >> end() - returns an iterator to the theoretical element that follows the las element in the map

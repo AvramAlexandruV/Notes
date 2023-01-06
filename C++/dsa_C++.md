@@ -16,7 +16,7 @@
       ^   ^   ^   ^   ^   ^   ^
       0   1   2   3   4   5   6 -> the index of the element
     ? the \0 elements marks the end of the string 
-
+>
     >>> functions
     <<
         >> strcat(char *destination, const char* source) - appends a copy of the source string to the destination string
@@ -31,19 +31,19 @@
     <<
         C++ has in its definition a way to represent a sequence of characters as an object of the class
     >>
-
+>
     >>> declaration
     <<
         string str;
     >>
-
+>
     >>> Input functions
     <<
         >> getline() - this function is used to store a stream of characters as entered by the user in the object memory
         >> push_back() - this function is used to input a character at the end of the string
         >> pop_back() - this function is used to delete the last character from the string
     >>
-
+>
     >>> Capacity functions
     <<
         >> capacity() - this function returns the capacity allocated to the string, which can be egual to or more than the size of the string.
@@ -51,13 +51,13 @@
         >> length() - this function finds the length of the string
         >> shrink_to_fit() - this function decreases the capacity of the string and makes it equal to the minimum capacity of the string.
     >>
-
+>
     >>> Iterator functions
     <<
         >> begin() - this function returns an iterator to the beginning of the string
         >> end() - this function returns an iterator to the next to the end of the string
     >>
-
+>
     >>> Manipulating functions
     <<
         >> copy(str, len, pos) - this function copies the substring in the target character array mentioned in its argument ( the str variable )
@@ -68,7 +68,7 @@
     <<
         Stringstream is a stream class to operate on strings. It implements input/output operations on memory (string) based streams.
     >>
-
+>
     >>> operators / functions
     <<
         >> Operator ( >> ) - extracts formatted data
@@ -108,6 +108,7 @@
     >>
 
 # Simple linked list
+>
     >>> node structure
     <<
         struct Node {
@@ -115,7 +116,7 @@
             struct Node* next;
         }
     >>
-
+>
     >>> main
     <<
         struct Node* head = NULL;
