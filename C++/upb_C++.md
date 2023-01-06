@@ -21,7 +21,7 @@
     >> sizeof(p)/sizeof(int)
 
 # matrice alocate dinamic
->>> alocare de memorie
+    >>> alocare de memorie
     <<
         void declarare(int** &m, int l, int c){
             m = (int**)calloc(l,sizeof(int*));
@@ -30,13 +30,13 @@
         }
     >>
     
->>> declarare
+    >>> declarare
     <<
         int **p, l, c;
         void declarare(p, l, c);
     >>
 
->>> eliberare memorie
+    >>> eliberare memorie
     <<
         for(int = 0; i < l; i++)
             free(p[i]);
