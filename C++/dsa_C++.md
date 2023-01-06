@@ -108,16 +108,216 @@
     >>
 
 # Simple linked list
+    >>> node structure
+    <<
+        struct Node {
+            int data;
+            struct Node* next;
+        }
+    >>
 
-# Double linked list
+    >>> main
+    <<
+        struct Node* head = NULL;
+        struct Node* second = NULL;
+        struct Node* third = NULL;
 
-# Circular linked list
+        head = (struct Node*)malloc(sizeof(struct Node));
+        second = (struct Node*)malloc(sizeof(struct Node));
+        third = (struct Node*)malloc(sizeof(struct Node));
 
-# Double Circular linked list
+        head->data = 1; head->next = second;
+        second->data = 2; second->next = third;
+        third->data = 3; third->next = NULL;
+    >>
 
-# Header Linked list
+    >>> traversal
+    <<
+        void traversal(struct Node* n){
+            while(n != NULL){
+                cout << n->data << " ";
+                n = n->next;
+            }
+        }
+    >>
 
-# Operatiosn with lists
+    >>> add node at the front ( O(1) )
+
+    1) allocate node
+    2) put in the data
+    3) make next of new node as head
+    4) move the head to point to the new node
+
+    <<
+        void front(struct Node** head_ref, int new_data){
+            //1
+            struct Node* new_node = (struct *Node)malloc(sizeof(struct Node));
+
+            //2
+            new_node->data = new_data;
+            
+            //3
+            new_node->next = (*head_ref);
+            
+            //4
+            (*head_ref) = new_node;
+        }
+    >>
+
+    >>> add node after given node ( O(1) )
+
+    1) check if the given node is NULL
+    2) allocate new node
+    3) put in the data
+    4) make next of new node as next of prev_node
+    5) move the next of the prev_node as new_node
+
+    <<
+        void given(struct Node* prev_node, int new_data){
+            //1
+            if(prev_node == NULL){
+                return;
+            }
+
+            //2
+            struct Node* new_node = (struct Node*)mallloc(sizeof(struct Node));
+
+            //3
+            new_node->data = new_data;
+
+            //4
+            new_node-next = prev_node->next;
+
+            //5
+            prev_node->next = new_node;
+
+        }
+    >>
+
+    >>> add node at the end ( O(1) )
+
+    1) allocate node
+    2) put in the data
+    3) this new node is the last, make next of it nulll
+    4) if the linked list in empty, then make the new node as head
+    5) else traverse till the last node
+    6) change the next of last node
+
+    <<
+        void end(struct Node** head_ref, int new_data){
+            //1
+            struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+
+            struct Node *last = *head_ref;
+
+            //2
+            new_node->data = new_data;
+
+            //3
+            new_node->next = NULL;
+
+            //4
+            if(*head_ref == NULL){
+                *head_ref = new_node; return;
+            }
+
+            //5
+            while(last->next != NULL)
+                last = last->next;
+
+            //6
+            last->next = new_node;
+        }
+    >>
+
+    >>> delete from beginning
+    
+    1) point head to the second node
+
+    <<
+        head = head->next;
+    >>
+
+    >>> delete from end
+
+    1) traverse to second last element
+    2) change its next pointer to null
+
+    <<
+        struct Node* tmp = head;
+        while(tmp->next->next != NULL){
+            tmp = tmp->next;
+        }
+        tmp->next = NULL;
+    >>
+
+    >>> delete from middle
+    
+    1) traverse to element before the element to be deleted
+    2) change next pointers to exclude the node from the chain
+
+    <<
+        for(int i = 2; i < pos; i++){
+            if(tmp->next != NULL){
+                tmp = tmp->next;
+            }
+        }
+
+        tmp->next = tmp->next->next;
+    >>
+
+    >>> search an element
+
+    1) make head as the current node
+    2) run a loop till the node is nul
+    3) each iteration check for the value
+
+    <<
+        bool search(struct Node** head_ref, int val){
+            struct Node* current = *head_ref;
+
+            while(current != NULL){
+                if(current->data == val) return true;
+                current = current->next;
+            }
+            return false;
+        }
+    >>
+
+    >>> sort
+
+    1) make head as the current node and create another node index for later use
+    2) if head is null, return
+    3) else, run a loop till the last node
+    4) in each iteration do steps 5 and 6
+    5) store the next node of current in index
+    6) check if the data of the current node is greater than the next node. If it is greater, swap current and index
+
+    <<
+        void sortLinkedList(struct Node** head_ref) {
+            struct Node *current = *head_ref, *index = NULL;
+            int temp;
+
+            if (head_ref == NULL) {
+                return;
+            } else {
+    
+            while (current != NULL) {
+                index = current->next;
+
+  	            while (index != NULL) {
+                    if (current->data > index->data) {
+                        temp = current->data;
+                        current->data = index->data;
+                        index->data = temp;
+    	            }
+    	        index = index->next;
+  	            }
+  	        current = current->next;
+                }
+            }
+        }
+    >>
 
 # Matrix / Grid
 
