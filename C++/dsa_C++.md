@@ -130,7 +130,7 @@
         second->data = 2; second->next = third;
         third->data = 3; third->next = NULL;
     >>
-
+>
     >>> traversal
     <<
         void traversal(struct Node* n){
@@ -140,7 +140,7 @@
             }
         }
     >>
-
+>
     >>> add node at the front ( O(1) )
 
     1) allocate node
@@ -163,7 +163,7 @@
             (*head_ref) = new_node;
         }
     >>
-
+>
     >>> add node after given node ( O(1) )
 
     1) check if the given node is NULL
@@ -193,7 +193,7 @@
 
         }
     >>
-
+>
     >>> add node at the end ( O(1) )
 
     1) allocate node
@@ -229,7 +229,7 @@
             last->next = new_node;
         }
     >>
-
+>
     >>> delete from beginning
     
     1) point head to the second node
@@ -250,7 +250,7 @@
         }
         tmp->next = NULL;
     >>
-
+>
     >>> delete from middle
     
     1) traverse to element before the element to be deleted
@@ -265,7 +265,7 @@
 
         tmp->next = tmp->next->next;
     >>
-
+>
     >>> search an element
 
     1) make head as the current node
@@ -283,7 +283,7 @@
             return false;
         }
     >>
-
+>
     >>> sort
 
     1) make head as the current node and create another node index for later use
